@@ -47,8 +47,8 @@ I would like to be able to play rock/paper/scissors
 * To end the game, we will forward to a 'shouldn't you be working' url
 
 ## Design
-!['Design Image']('/images/RPS Background.png')
-Format: ![Alt Text]
+!['Design Image']
+('/images/RPS.png')
 
 ## Test Coverage
 ```
@@ -66,9 +66,6 @@ Tests are located within /spec folder. As the website is built out we would expe
 
 ## Contributing
 As this is a weekend challenge, I have done this alone. 
-
-## Contributors
-Thanks to @stupot1
 
 ## Follow Up
 
