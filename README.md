@@ -47,8 +47,8 @@ I would like to be able to play rock/paper/scissors
 * To end the game, we will forward to a 'shouldn't you be working' url
 
 ## Design
-!['Design Image']
-('/images/RPS.png')
+![Design of Story]
+(/images/RPS.png)
 
 ## Test Coverage
 ```
