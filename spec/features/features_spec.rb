@@ -22,5 +22,12 @@ feature 'Enter names' do
     sign_in_and_play
     expect(page).to have_content 'Player wins'
   end
+  scenario "Player wins two rounds and wins the game." do
+    srand(3)
+    sign_in_and_play
+    srand(3)
+    click_button 'Submit'
+    expect(page).to have_content 'Player wins'
+  end
 
 end
