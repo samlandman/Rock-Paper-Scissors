@@ -7,10 +7,20 @@ feature 'Enter names' do
     sign_in_and_play
     expect(page).to have_content 'Rock'
   end
-  scenario "player enters Rock and Computer Chooses Rock. Round Drawn" do
+  scenario "Player enters Rock and Computer Chooses Rock. Round Drawn" do
     srand(0)
     sign_in_and_play
     expect(page).to have_content 'draw'
+  end
+  scenario "Player enters Rock and Computer Chooses Paper. Computer wins" do
+    srand(1)
+    sign_in_and_play
+    expect(page).to have_content 'Computer wins'
+  end
+  scenario "Player enters Rock and Computer Chooses Scissors. Player wins" do
+    srand(2)
+    sign_in_and_play
+    expect(page).to have_content 'Player wins'
   end
 
 end
