@@ -44,19 +44,19 @@ I would like to be able to play rock/paper/scissors
 * Game will be best of of 3
 * That the game will be versus a computer
 * The game will be allowed to restart
-* To end the game, we will forward to a 'shouldn't you be working' url
 
 ## Design
 ![Design](/images/RPS.png)
 
 ## Test Coverage
 ```
-Test Coverage: 0.00% -- 0/0 lines in 0 files
+Test Coverage: 85.62% -- 85/100 lines in 5 files
 ```
 ## Methods
 
 ```ruby
 game.new("name") # creates a new game with default Player2 as computer
+game.play("Rock") # plays a round of a game with Player1 choice as "Rock" and computer as random
 ```
 
 ## How to Run the Tests
@@ -71,7 +71,8 @@ As this is a weekend challenge, I have done this alone.
 We would like to include:
 - An option to play with another player
 - Another game to play (eg. Noughts and Crosses)
-- Better UX on the website
+- Store the player so that they can play multiple games
+- Store the scores of each game of three to have an overall leaderboard
 
 <p align="center">
     <a href="https://https://makers.tech/">
