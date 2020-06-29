@@ -8,13 +8,14 @@
 
 <% else %>
 <h1>Let the battle commence!</h1>
+
+<h1><%= @game.play(@RPS_input) %> </h1>
+
 <h1><%= @game.player_1.name %> vs <%= @game.player_2.name %> </h1>
 <h2><%= @game.player_1.name %>: <%= @game.player_1.points %> </h2>
 <h2><%= @game.player_2.name %>: <%= @game.player_2.points %> </h2>
 
 <iframe src="https://giphy.com/embed/Z7syBJH78V0oo" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cheezburger-other-yikes-Z7syBJH78V0oo"></a></p>
-
-<h1><%= @game.play(@RPS_input) %> </h1>
 
 <form action="/action" method="post">
   <label for="Input">Rock, Paper or Scissors?</label>
