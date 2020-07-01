@@ -3,19 +3,21 @@ require './lib/game'
 
 class RPS < Sinatra::Base
   enable :sessions
+
   get '/' do
     erb :index
   end
 
   post '/names' do
     $rps_input = params[:RPS_input]
-    $game = Game.new(params[:name],"computer")
+    player_1 = params[:name]
+    @game = Game.create(player_1,"Computer")
     redirect '/game'
   end
 
   get '/game' do
     @RPS_input = $rps_input
-    @game = $game
+    @game = Game.instance
     erb :game
   end
 

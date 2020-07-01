@@ -2,6 +2,15 @@ require_relative "person"
 
 class Game
   attr_accessor :array, :player_1, :player_2
+
+  def self.create(player_1,player_2 = nil)
+    @game = Game.new(player_1,player_2)
+  end
+
+  def self.instance
+    @game
+  end
+
   def initialize(name = "default", name2 = nil)
     @array = ["Rock","Paper","Scissors"]
     @player_1 = Person.new(name)
