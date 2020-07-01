@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/game'
+require './lib/person'
 
 class RPS < Sinatra::Base
   enable :sessions
@@ -23,7 +24,17 @@ class RPS < Sinatra::Base
 
   post '/action' do
     $rps_input = params[:RPS_input]
-    redirect '/game'
+    @game = Game.instance
+    if @game.player_1.points == 2 || @game.player_2.points == 2
+      redirect '/winner'
+    else
+      redirect '/game'
+    end
+  end
+
+  get '/winner' do
+    @game = Game.instance
+    erb :winner
   end
 
 end

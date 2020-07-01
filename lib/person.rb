@@ -4,4 +4,7 @@ class Person
     @name = name
     @points = 0
   end
+  def round_win
+    @points += 1
+  end
 end
